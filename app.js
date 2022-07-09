@@ -32,7 +32,7 @@ app.use(session({
 }))
 app.use(flash());
 //app.use(expressValidator());
-app.use('/index',indexRouter);
+app.use('',indexRouter);
 app.use('/ficha',fichaRouter);
 app.use('/citas',citasRouter);
 app.use('/horarios',horariosRouter);
