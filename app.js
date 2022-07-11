@@ -48,7 +48,7 @@ var credentials = {
   requestCert: true,
   rejectUnauthorized: false
 }
-
+app.use(cors());
 io.on('connection', function (socket) {
   console. log (socket);
   socket. on ('authenticate', function (data) {
