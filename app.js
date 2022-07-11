@@ -44,9 +44,7 @@ app.use('/horarios',horariosRouter);
 //});
 // error handler
 var credentials = {
-  key: fs.readFileSync ('./cert/key.key') ,
-  cert: fs.readFileSyne ('./cert/cert.crt'),
-  ca: fs.readFileSync ('./cert/bundle.crt'),
+ 
   requestCert: true,
   rejectUnauthorized: false
 }
