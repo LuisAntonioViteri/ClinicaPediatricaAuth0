@@ -43,7 +43,17 @@ app.use('/horarios',horariosRouter);
 //});
 // error handler
 
+var dbConfig = {
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'ficha_medica',
+  connectionLimit: 50,
+  queueLimit: 0,
+  waitForConnection: true
+};
 
+var database = mysql.createPool(dbConfig);
 
 const PORT = process.env.PORT || 4000 
 app.listen(PORT, function() {
