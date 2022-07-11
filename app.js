@@ -43,6 +43,7 @@ app.use('/horarios',horariosRouter);
  // next(createError(404));
 //});
 // error handler
+var cors=require('cors');
 var credentials = {
  
   requestCert: true,
