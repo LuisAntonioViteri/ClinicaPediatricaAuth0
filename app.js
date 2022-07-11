@@ -1,7 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
 var https=require ('https');
-var fs=require('fs');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -43,39 +42,11 @@ app.use('/horarios',horariosRouter);
  // next(createError(404));
 //});
 // error handler
-var cors=require('cors');
-var credentials = {
- 
-  requestCert: true,
-  rejectUnauthorized: false
-}
-app.use(cors());
-io.on('connection', function (socket) {
-  console. log (socket);
-  socket. on ('authenticate', function (data) {
-  console. log (data);
-  });
-});
-
-
-var server = https.createServer(credentials,app);
-var io=require('socket.io')(server);
-
-var port = process.env.PORT || 8080;
-server.listen (port, function (){
-console. log ("server listen on", this .address ());
-});
-server.on ( 'clientError' , function (err) {
-console.log( 'ERROR', err);
-});  
 
 
 
-
-
-//const PORT = process.env.PORT || 4000
-//app.listen(PORT, function() {
-  //console.log("Servidor escuchando en el puerto",PORT)
- 
-//});
+const PORT = process.env.PORT || 4000
+app.listen(PORT, function() {
+  console.log("Servidor escuchando en el puerto",PORT)
+ });
 module.exports = app;
