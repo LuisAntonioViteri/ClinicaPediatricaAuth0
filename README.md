@@ -7,6 +7,7 @@ Existe dos tipos de comparacion la comparción por edad y la comparación por fe
 
 
 -Comparación por Edad: Compara por la edad de los pacientes y da como resultado el nombre del paciente, la edad, el medicamento y el motivo.
+
 -Comparación por Fecha: Compara por fecha de consulta, y da como resultado el nombre del paciente, fecha de consulta y las patologías del paciente.
 
 ***
