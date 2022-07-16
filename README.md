@@ -1,5 +1,6 @@
 # Proyecto
 Proyecto Final Ing Web
+
 El proyecto se basa en un seguimiento de enfermedades de un consultorio médico, la página princiapl cuenta con un creador de fichas médicas el cual tiene diferentes acciones como crear, ver, buscar, editar y eliminar. 
 Existe otra pestaña para crear citas médicas en esta solo se puede crear, editar y eliminar.
 La pestaña de crear horario de medicamentos se puede crear, editar y eliminar los horarios de medicamentos para los pacientes ingresados.
