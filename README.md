@@ -4,6 +4,8 @@ El proyecto se basa en un seguimiento de enfermedades de un consultorio médico,
 Existe otra pestaña para crear citas médicas en esta solo se puede crear, editar y eliminar.
 La pestaña de crear horario de medicamentos se puede crear, editar y eliminar los horarios de medicamentos para los pacientes ingresados.
 Existe dos tipos de comparacion la comparción por edad y la comparación por fecha:
+
+
 -Comparación por Edad: Compara por la edad de los pacientes y da como resultado el nombre del paciente, la edad, el medicamento y el motivo.
 -Comparación por Fecha: Compara por fecha de consulta, y da como resultado el nombre del paciente, fecha de consulta y las patologías del paciente.
 
