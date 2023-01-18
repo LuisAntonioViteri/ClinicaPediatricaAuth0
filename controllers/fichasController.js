@@ -35,18 +35,19 @@ const editar = (req, res) => {
             })
         }
 
-const eliminar = (req, res) => {
-    const id = req.params.id
-    // console.log(id)
-    
-    connection.query('DELETE FROM ficha WHERE id_ficha=?', [id], (error, datos) => {
-        if(error){
-            throw error
-        }else{
-            res.redirect('/ficha')
+        const eliminar = (req, res) => {
+            const id = req.params.id
+            // console.log(id)
+            
+            connection.query('DELETE FROM ficha WHERE id_ficha = ?', [id], (error, datos) => {
+                if(error){
+                    throw error
+                }else{
+                    res.redirect('/fichas')
+                }
+            })
         }
-    })
-}
+        
 
 const guardar = (req,res) => {
     const id_ficha = req.body.id_ficha
