@@ -30,6 +30,11 @@
                   <li class="nav-items">
                     <a href="/citas/comparacionfecha" class="nav-link" ">Comparación por Fecha</a>
                   </li>
+                  <% if(!isAuthenticated){ %>
+                  <li><a href="/login/">Login</a></li>
+                  <% } else { %>
+                  <li><a href="/logout/">Logout</a></li>
+                  <% } %>
             </ul>
         </div>
     </nav>

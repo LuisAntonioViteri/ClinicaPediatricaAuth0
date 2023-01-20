@@ -16,10 +16,27 @@ var fichaRouter = require('./routes/fichas');
 var citasRouter = require('./routes/citas');
 var horariosRouter = require('./routes/horarios');
 
+//Auth0
+
+const { auth } = require('express-openid-connect');
+require('dotenv').config()
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASEURL,
+  clientID: process.env.CLIENTID,
+  issuerBaseURL: process.env.ISSUER
+};
+
+
+
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(auth(config));//Use auth 0 config
 app.use(logger('dev'));
 app.use(bodyParser.json({limit:'12mb'}));
 app.use(bodyParser.urlencoded({ limit:'12mb',extended: true }));
